@@ -10,10 +10,8 @@ function logData(jsonData){
 }
 
 function validateUserInput(userInput){
-    let input = userInput.filter((userIn) => /^\S/.test(userIn));
+    let input = userInput.filter((userIn) => /\S/.test(userIn));
     let [cmd, num, ...etc] = input;
-    //console.log(`cmd: ${cmd}, num: ${num}, etc: ${etc}`);
-    //console.log(isNaN(num));
     if(cmd !== 'photo-album' ||
        num === undefined ||
        isNaN(num) ||
